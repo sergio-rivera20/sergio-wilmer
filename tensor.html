@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IA en Accion</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.1.2/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+
+    
+    <style>
+        button{
+            margin: 2px;
+            padding: 4px;
+
+        }
+        video{
+            width: 300;
+            height: 300;
+
+        }
+        p{
+            display: inline;
+            font-size: 14px;
+
+        }
+        h6{
+            margin: 4px;
+            font-weight: lighter;
+            font-size: 14px;
+            margin-bottom: 10px;
+
+        }
+    </style>
+</head>
+    <body>
+        <h1>entrenar modelo para reconocer gente con o sin mascarilla</h1>
+        <div id="contenedorvideo"></div>
+        <h2><span id="resultado"></span></h2>
+        <h6><span id="estadomodelo">cargando modelo base. ...</span>|<span id="estadovideo">cargando video...</span></h6>
+        <p><button id="btnmascarilla">con mascarilla</button></p>
+        <p><span id="sumamascarilla">0</span>imagenes</p>
+        <br>
+        <p><button id="btnnomascarilla">sin mascarilla</button></p>
+        <p><span id="sumanomascarilla">0</span>imagenes</p>
+        <br>
+        <p><button id="btnentrenar">entrenar modelo</button></p>
+        <p><span id="perdida">0</span></p>
+        <br>
+        <p><button id="btnpredecir">prediccion</button></p>
+        
+        
+    
+    </body>
+    <script src="reconocimiento.js"></script>
+</html>
